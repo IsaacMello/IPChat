@@ -36,7 +36,7 @@ int main (void) {
       return EXIT_FAILURE;
    // Envia uma mensagem para o servidor 
    c2s.prioridade = 2;
-   sprintf (c2s.mensagem, "%d:Login\n", idUsuario);
+   sprintf (c2s.mensagem, "%d:Usuario\n", idUsuario);
    res = msgsnd (idServidor, &c2s, MSG_LEN, 0);
    if (res == -1) {
       printf ("Nao foi possivel enviar a mensagem ...\n");
